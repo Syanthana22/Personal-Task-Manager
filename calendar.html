@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Task Manager - Calendar</title>
+    <link rel="stylesheet" href="calendar.css">
+</head>
+<body>
+    <header>
+        <b>Personal Task Manager-Calendar</b>
+    </header>
+     <nav>
+                <ul>
+                    <li><a href="tasks.html">Tasks</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="logout.html">Logout</a></li>
+                </ul>
+     </nav>
+
+<div class="navigation">
+    <button onclick="previousMonth()">❮</button>
+    <h2 id="monthYear">Calendar</h2>
+    <button onclick="nextMonth()">❯</button>
+</div>
+
+<table id="calendar">
+    <thead>
+        <tr>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Days will be dynamically generated here -->
+    </tbody>
+</table>
+
+<script>
+    let currentMonth;
+    let currentYear;
+
+    function generateCalendar(month, year) {
+        const tableBody = document.querySelector('#calendar tbody');
+        const monthYearHeader = document.querySelector('#monthYear');
+
+        // Clear existing content
+        tableBody.innerHTML = '';
+
+        // Set the month and year in the header
+        monthYearHeader.textContent = `${new Date(year, month).toLocaleString('default', { month: 'long' })} ${year}`;
+
+        // Get the first day of the month and the total number of days in the month
+        const firstDay = new Date(year, month, 1).getDay();
+        const lastDay = new Date(year, month + 1, 0).getDate();
+
+        // Create a new row
+        let row = tableBody.insertRow();
+
+        // Add empty cells for days before the first day of the month
+        for (let i = 0; i < firstDay; i++) {
+            row.insertCell();
+        }
+
+        // Loop through the days of the month
+        for (let day = 1; day <= lastDay; day++) {
+            const cell = row.insertCell();
+            cell.textContent = day;
+
+            // Move to the next row if it's Saturday (index 6)
+            if (cell.cellIndex === 6) {
+                row = tableBody.insertRow();
+            }
+        }
+    }
+
+    function previousMonth() {
+        currentMonth--;
+        if (currentMonth < 0) {
+            currentMonth = 11;
+            currentYear--;
+        }
+        generateCalendar(currentMonth, currentYear);
+    }
+
+    function nextMonth() {
+        currentMonth++;
+        if (currentMonth > 11) {
+            currentMonth = 0;
+            currentYear++;
+        }
+        generateCalendar(currentMonth, currentYear);
+    }
+
+    // Get the current date
+    const currentDate = new Date();
+    currentMonth = currentDate.getMonth();
+    currentYear = currentDate.getFullYear();
+
+    // Generate the calendar for the current month
+    generateCalendar(currentMonth, currentYear);
+</script>
+
+</body>
+</html>

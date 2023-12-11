@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>View Tasks</title>
+    <link rel="stylesheet" href="viewtasks.css">
+</head>
+
+<body>
+    <header>
+        <b>Personal Task Manager-My Tasks</b>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="tasks.html">Tasks</a></li>
+            <li><a href="completedtasks.html">Completed Tasks</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="logout.html">Logout</a></li>
+            
+        </ul>
+    </nav>
+    <div id="viewtasks-container">
+        <h2>View and Edit Tasks</h2>
+        <table id="task-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Task</th>
+                    <th>Completed</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="viewtasks-body">
+                <!-- Table rows will be dynamically added here by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="viewtasks.js"></script>
+</body>
+
+</html>

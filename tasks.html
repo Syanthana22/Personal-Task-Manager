@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tasks.css">
+    <title>Personal Task Manager - Tasks</title>
+</head>
+
+<body>
+    <header>
+        <b>Personal Task Manager-Add Tasks</b>
+    </header>
+    <nav>
+        <ul>
+
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="viewtasks.html">View Tasks</a></li>
+            <li><a href="completedtasks.html">completed Tasks</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="logout.html">Logout</a></li>
+            
+        </ul>
+    </nav>
+    <div id="tasks-container">
+        <h2>Tasks</h2>
+        <form id="task-form">
+            <label for="taskName">Task Name:</label>
+            <input type="text" id="taskName" required>
+            
+            <label for="taskDate">Task Date:</label>
+            <input type="date" id="taskDate" required>
+            
+            <button type="button" onclick="addTask()">Add Task</button>
+        </form>
+
+        <ul id="task-list"></ul>
+    </div>
+
+    <script src="tasks.js"></script>
+</body>
+
+</html>

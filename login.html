@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="log.css">
+</head>
+
+<body>
+    <header>
+        <b>Personal Task Manager</b>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+
+        </ul>
+    </nav>
+    <div id="form-container">
+        <form class="a" target="_blank" id="loginForm" onsubmit="submitForm(event)" action="dashboard.html">
+            <legend>Login Form</legend>
+            <fieldset>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <br><br>
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+                <br><br>
+                <input type="submit" value="Submit">
+                <br>
+            </fieldset>
+        </form>
+    </div>
+    <script src="log.js"></script>
+</body>
+
+</html>

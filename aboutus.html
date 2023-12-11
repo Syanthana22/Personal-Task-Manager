@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'aboutus.css' %}">
+    <title>About Us</title>
+</head>
+
+<body>
+    <header>
+        <b>Personal Task Manager</b>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'register' %}">Register</a></li>
+            <li><a href="{% url 'login' %}">Login</a></li>
+        </ul>
+    </nav>
+    <div id="content-container">
+        <section id="about-us">
+            <h2>About Us</h2>
+            <p>Welcome to Personal Task Manager, your go-to platform for managing your tasks efficiently. Our mission is to
+                provide a simple and intuitive task management solution for individuals and small teams.</p>
+
+            <h3>Our Team</h3>
+            <p>We are a dedicated team of developers and designers passionate about creating tools that enhance
+                productivity and organization. Our goal is to empower users to stay on top of their tasks and achieve
+                their goals.</p>
+
+            <h3>Contact Us</h3>
+            <p>If you have any questions, feedback, or suggestions, feel free to contact us:</p>
+            <ul>
+                <li>Email: me@gmail.com</li>
+                <li>Phone: +91 9829832324</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Personal Task Manager. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

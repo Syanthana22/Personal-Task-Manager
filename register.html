@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="reg.css"> <!-- Update the URL to the actual path of your reg.css file -->
+</head>
+
+<body>
+    <header>
+        <h1>Personal Task Manager</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <div id="form-container">
+        <form class="a" id="registrationForm" action="login.html">
+            <fieldset>
+                <legend>Registration Form</legend>
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" placeholder="Enter your full name" required>
+                <br><br>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter Email Address" required>
+                <br><br>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter Username" required>
+                <br><br>
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+                <br><br>
+                <label>Gender:</label>
+                <label><input type="radio" name="gender" value="male" required> Male</label>
+                <label><input type="radio" name="gender" value="female" required> Female</label>
+                <label><input type="radio" name="gender" value="other" required> Other</label>
+                <br><br>
+                <label for="age">Age</label>
+                <input type="number" id="age" placeholder="Enter your age" required>
+                <br><br>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+                <br>
+            </fieldset>
+        </form>
+    </div>
+    <script src="C:\Users\DELL\Desktop\Intern Project\reg.js"></script> <!-- Update the URL to the actual path of your reg.js file -->
+</body>
+
+</html>
